@@ -6,18 +6,6 @@ var myRocket = movableShape;
 // (Basically, you can copy and paste your code from last time, although you may wish to refactor it so that it's more readable.)
 // That said, you may wish to try putting your unrefactored, raw drawing code from week 1 in here
 myRocket.drawShape = function () {
-	function setup() 
-	  createCanvas(800, 800); // make a canvas
-	  background(0); // make it night
-	  noStroke(); // no outline
-	  fill(100); // dark ground
-	  rect(0, 600, 800, 200); // draw the ground
-
-	  fill(255);
-	  ellipse(600, 100, 75, 75);
-	  drawRocket();
-	};
-	function drawRocket()  {
 	  fill(150); // steel grey rocket
 	  var bodyX = 300;
 	  var bodyY = 300;
@@ -47,19 +35,24 @@ myRocket.drawShape = function () {
 	  fill(250);
 	  ellipse(tipTopX, tipTopY + topLeftX, outerRightX - topRightX, tipTopY / 2, tipTopY * 2); // make a window
 	};
-	function draw() {
-	  drawRocket();
-	};
+
 	// your code goes here
 
 // You will also need to do some work to set the speed of the shape. How do you want it to move? What do you need to change to get it to move?
 
 setup = function() {
-	createCanvas(600, 600);
+	createCanvas(800, 800); // make a canvas
+  background(0); // make it night
+  noStroke(); // no outline
+  fill(100); // dark ground
+  rect(0, 600, 800, 200); // draw the ground
+
+  fill(255);
+  ellipse(600, 100, 75, 75); // draw the moon
 };
 
 draw = function() {
   background(100); // refresh the background
-  myShape.display(); // display myShape
-  myShape.update(); // and then update it
+  myRocket.display(); // display myShape
+  myRocket.update(); // and then update it
 };

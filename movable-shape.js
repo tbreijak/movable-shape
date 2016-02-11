@@ -6,7 +6,7 @@ var movableShape = {
 	// origin is used to store the original position of the shape
 	origin: { x: 0, y: 0},
 	// delta.x and delta.y indicate how much to move() the shape
-	speed: { x: 0, y: 0 },
+	speed: { x: 0, y: 3 },
 
 	/*
 		Put your shape(s) in drawShape()
@@ -37,7 +37,7 @@ var movableShape = {
 	// Applies speed.x and speed.y to the shape
 	move: function () {
 		this.x += this.speed.x;
-		this.y += this.speed.y;
+		this.y += this.speed.y * -2;
 	}
 
 };
