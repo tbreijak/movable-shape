@@ -37,7 +37,7 @@ var movableShape = {
 	// Applies speed.x and speed.y to the shape
 	move: function () {
 		this.x += this.speed.x;
-		this.y += this.speed.y;
+		this.y += this.speed.y * 2;
 	}
 
 };
